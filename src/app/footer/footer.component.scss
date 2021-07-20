@@ -2,9 +2,65 @@ footer {
   border-top: solid 1px grey;
 }
 
+h2 {
+  font-weight: 100;
+}
+
 .blue {
+  padding-top: 25px;
+  font-size: 10pt;
   background-color: #0090E3;
   color: white;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 250px;
+  grid-template-areas:
+    ". a b b c .";
+}
+
+.grid2 {
+  border-top: white solid 1px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px;
+  grid-template-areas:
+    ". d e f g .";
+}
+
+// source: https://stackoverflow.com/a/15706906
+.grid2 * {
+  align-self: center;
+}
+
+.item1 {
+  grid-area: a;
+}
+
+.item2 {
+  grid-area: b;
+}
+
+.item3 {
+  grid-area: c;
+}
+
+.item4 {
+  grid-area: d;
+}
+
+.item5 {
+  grid-area: e;
+}
+
+.item6 {
+  grid-area: f;
+}
+
+.item7 {
+  grid-area: g;
 }
 
 .center {
@@ -14,4 +70,35 @@ footer {
 
 .orange {
   color: #FF6601
+}
+
+
+// Soucre: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2
+
+input[type=text] {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  border: 3px solid #0090E3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #FF6601;
+}
+
+.aanmelden {
+  text-align: center;
+  padding: 10px 30px;
+  background-color: #FF6601;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.subtext {
+  font-weight: 200;
 }
