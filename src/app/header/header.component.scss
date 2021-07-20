@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  color: white;
+  overflow: hidden;
+}
+
+header {
+  background-color: #0090E3;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: 60px;
+  grid-template-areas:
+    ". . a b . c c c d e f . .";
+}
+
+// source: https://stackoverflow.com/a/15706906
+header * {
+  align-self: center;
+  justify-self: center;
+}
+
+.item1 {
+  grid-area: a;
+  background-color: #FF6601;
+  font-family: "Soolidium";
+  font-size: 15pt;
+  line-height: 25px;
+  padding: 25px;
+  border-radius: 50%;
+}
+
+.item2 {
+  grid-area: b;
+  font-size: 12pt;
+}
+
+.item3 {
+  grid-area: c;
+}
+
+.item4 {
+  grid-area: d;
+}
+
+.item5 {
+  grid-area: e;
+}
+
+.item6 {
+  grid-area: f;
+}
+
+.icon {
+  fill: red;
+  height: 30px;
+  width: 30px;
+}
