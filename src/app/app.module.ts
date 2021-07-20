@@ -7,6 +7,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProductpageComponent } from './productpage/productpage.component';
 import { ProductlistpageComponent } from './productlistpage/productlistpage.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { SearchComponent } from './header/search/search.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HomepageComponent,
     ProductpageComponent,
-    ProductlistpageComponent
+    ProductlistpageComponent,
+    HeaderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,8 @@
+<app-header></app-header>
 <p>homepage works!</p>
 
-{{productList}}
+<ul>
+  <li *ngFor="let product of productList |async; index as i">
+    {{i+1}}. {{product.title}}
+  </li>
+</ul>

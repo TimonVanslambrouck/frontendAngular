@@ -1,3 +1,8 @@
-<p>productpage works!</p>
+<app-header></app-header>
+<p>productpage works! 2</p>
 
-{{product}}
+<ul>
+  <li>
+    {{(product|async)?.title}}
+  </li>
+</ul>
