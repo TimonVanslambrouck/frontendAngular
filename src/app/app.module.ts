@@ -9,6 +9,7 @@ import { ProductlistpageComponent } from './productlistpage/productlistpage.comp
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './header/search/search.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SearchComponent } from './header/search/search.component';
     ProductpageComponent,
     ProductlistpageComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
