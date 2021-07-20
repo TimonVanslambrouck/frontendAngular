@@ -1,0 +1,15 @@
+// Soucre: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2
+
+input[type=text] {
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 3px solid #0090E3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #FF6601;
+}
