@@ -78,9 +78,30 @@ nav li {
 nav h1 {
   cursor: pointer;
   display: inline-block;
-  padding: 20px 3%;
+  margin: 20px 3%;
 }
 
 .arrow {
   font-size: 15px;
+}
+
+.reversedArrow {
+  font-size: 15px;
+}
+
+.categories {
+  border: rgb(194, 194, 194) 1px solid;
+  position: absolute;
+  background-color: white;
+  color: #0090E3;
+  margin-left: 10%;
+}
+
+.categories ul {
+  padding: 0;
+  margin: 0;
+}
+
+.categories li {
+  margin: 15px 20px;
 }

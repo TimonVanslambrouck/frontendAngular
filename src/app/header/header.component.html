@@ -8,8 +8,8 @@
 </header>
 
 <nav>
-  <li>
-    <h1>Categroieën <span class="arrow">v</span></h1>
+  <li (click)="toggleShowCategories()">
+    <h1>Categorieën <span [className]="showCategories? '' : 'arrow'">v</span></h1>
   </li>
   <li>
     <h1>Acties <span class="arrow">v</span></h1>
@@ -24,3 +24,17 @@
     <h1>Klantenservice</h1>
   </li>
 </nav>
+
+<div *ngIf="showCategories" class="categories">
+  <ul>
+    <li>Computers & tablets</li>
+    <li>Beeld & geluid</li>
+    <li>Telefonie</li>
+    <li>Huishouden & wonen</li>
+    <li>Keuken</li>
+    <li>Sport & verzorging</li>
+    <li>Foto & video</li>
+    <li>Navigatie, reizen & fashion</li>
+    <li>Tuin & klussen</li>
+  </ul>
+</div>
