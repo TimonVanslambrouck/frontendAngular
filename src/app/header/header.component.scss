@@ -59,20 +59,28 @@ header * {
 }
 
 // Source: https://csswizardry.com/2011/01/create-a-centred-horizontal-navigation/
+// grid-template-columns: 0.85fr 1.25fr repeat(3, 0.9fr) 1.25fr 0.85fr;
 
 nav {
+  display: grid;
+  grid-template-columns: 1.25fr 1.2fr repeat(3, 1fr) 1.2fr 1.25fr;
+  grid-template-rows: 60px;
   background-color: #F2F7FC;
-  height: 60px;
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
   color: #0090E3;
-  font-size: 11pt;
+  font-size: 10pt;
+  overflow: auto;
 }
 
 nav li {
   display: inline;
+}
+
+nav li:first-of-type {
+  grid-column-start: 2;
 }
 
 nav h1 {
@@ -94,14 +102,28 @@ nav h1 {
   position: absolute;
   background-color: white;
   color: #0090E3;
-  margin-left: 10%;
+  margin-left: calc((140%/7.9));
+  width: 12%;
+  height: 32%;
 }
 
-.categories ul {
+.categories ul,
+.categories2 ul {
   padding: 0;
   margin: 0;
 }
 
-.categories li {
+.categories li,
+.categories2 li {
   margin: 15px 20px;
+}
+
+.categories2 {
+  border: rgb(194, 194, 194) 1px solid;
+  position: absolute;
+  background-color: white;
+  color: #0090E3;
+  margin-left: calc((250%/7.9));
+  width: 12%;
+  height: 22%;
 }

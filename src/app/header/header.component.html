@@ -11,7 +11,7 @@
   <li (click)="toggleShowCategories()">
     <h1>Categorieën <span [className]="showCategories? 'arrow' : 'reversedArrow'">v</span></h1>
   </li>
-  <li>
+  <li (click)="toggleShowCategories2()">
     <h1>Acties <span class="arrow">v</span></h1>
   </li>
   <li>
@@ -36,5 +36,16 @@
     <li>Foto & video</li>
     <li>Navigatie, reizen & fashion</li>
     <li>Tuin & klussen</li>
+  </ul>
+</div>
+
+<div *ngIf="showCategories2" class="categories2">
+  <ul>
+    <li>Promoties</li>
+    <li>Tweedekans</li>
+    <li>Cadeaus</li>
+    <li>Cadeaubonnen</li>
+    <li>Coolblue fanartikelen</li>
+    <li>Alle merken</li>
   </ul>
 </div>
