@@ -1,0 +1,61 @@
+.body {
+  margin: 1% 15%;
+}
+
+.category {
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  background-color: red;
+  width: calc(97%/3);
+  display: inline-block;
+  margin: 0.5%;
+  height: 300px;
+  box-sizing: border-box;
+  border: solid 1px rgb(211, 211, 211);
+}
+
+.category:first-of-type {
+  background: url("/assets/imgs/telefonie.png") center no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.category:nth-of-type(2) {
+  background: url("/assets/imgs/tele.jpg") center no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.category:nth-of-type(3) {
+  background: url("/assets/imgs/washer.jpg") center no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.category:nth-of-type(4) {
+  background: url("/assets/imgs/tablet.jpg") center no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.category:nth-of-type(5) {
+  background: url("/assets/imgs/camera.jpeg") center no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
+.category:last-of-type {
+  background-color: #B2DDF7;
+}
+
+.category h1 {
+  border: solid 1px rgb(211, 211, 211);
+  border-radius: 5px;
+  font-size: 25px;
+  background-color: white;
+  color: #0090E3;
+  margin-top: 250px;
+  margin-left: 10%;
+  width: 80%;
+}
