@@ -33,14 +33,42 @@
     </div>
   </div> -->
 
+  <!-- Source: https://stackoverflow.com/a/37818735 -->
+
   <div class="products">
-    <div class="product" *ngFor="let product of productList |async; index as i">
-      <img class="productImage" src="{{product.image}}" alt="object">
-      <h2 class="productBrand">{{product.category}}</h2>
-      <h1 class="productName">{{product.title}}</h1>
-      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
-      <h2 class="productReview">{{product.id}} reviews</h2>
-      <h2 class="productPrice">€{{product.price}}</h2>
-    </div>
+    <ng-container *ngFor="let product of productList |async; index as i">
+      <div *ngIf="i<5" class="product">
+        <img (click)="onSave(product.id)" class="productHeart" id="heart{{product.id}}" src="assets/svg/heart-thin.svg"
+          alt="like">
+        <img class="productImage" src="{{product.image}}" alt="object">
+        <h2 class="productBrand">{{product.category}}</h2>
+        <h1 class="productName">{{product.title}}</h1>
+        <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+        <h2 class="productReview">{{product.id}} reviews</h2>
+        <h2 class="productPrice">€{{product.price}}</h2>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="images">
+    <img src="assets/imgs/eco.webp" alt="ecocheques">
+    <img src="assets/imgs/ijsje.webp" alt="ecocheques">
+  </div>
+
+  <h1 class="title">Eerder bekeken producten</h1>
+
+  <div class="products">
+    <ng-container *ngFor="let product of productList |async; index as i">
+      <div *ngIf="i>=5 && i<10" class="product">
+        <img (click)="onSave(product.id)" class="productHeart" id="heart{{product.id}}" src="assets/svg/heart-thin.svg"
+          alt="like">
+        <img class="productImage" src="{{product.image}}" alt="object">
+        <h2 class="productBrand">{{product.category}}</h2>
+        <h1 class="productName">{{product.title}}</h1>
+        <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+        <h2 class="productReview">{{product.id}} reviews</h2>
+        <h2 class="productPrice">€{{product.price}}</h2>
+      </div>
+    </ng-container>
   </div>
 </div>

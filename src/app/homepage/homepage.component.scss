@@ -78,6 +78,7 @@
 }
 
 .product {
+  position: relative;
   cursor: pointer;
   box-sizing: border-box;
   display: inline-block;
@@ -89,6 +90,13 @@
   width: calc(95%/5);
   min-width: 200px;
   margin: 0.5%;
+}
+
+.productHeart {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 30px;
 }
 
 .productImage {
@@ -125,4 +133,13 @@
 
 .productPrice {
   margin: 5px;
+}
+
+.images img {
+  margin: 30px 0 0;
+  width: 49%;
+}
+
+.images img:first-of-type {
+  margin-right: 1%;
 }
