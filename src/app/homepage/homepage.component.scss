@@ -2,21 +2,27 @@
   margin: 1% 15%;
 }
 
+.categoriesBox {
+  text-align: center;
+}
+
 .category {
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  background-color: red;
+  background-color: #0090e354;
   width: calc(97%/3);
+  min-width: 260px;
   display: inline-block;
   margin: 0.5%;
   height: 300px;
+  max-height: 300px;
   box-sizing: border-box;
   border: solid 1px rgb(211, 211, 211);
 }
 
 .category:first-of-type {
-  background: url("/assets/imgs/telefonie.png") center no-repeat;
+  background: url("/assets/imgs/telefonie.jpg") center no-repeat;
   background-size: contain;
   background-color: white;
 }
@@ -52,10 +58,71 @@
 .category h1 {
   border: solid 1px rgb(211, 211, 211);
   border-radius: 5px;
-  font-size: 25px;
+  font-size: 20px;
   background-color: white;
   color: #0090E3;
-  margin-top: 250px;
+  margin-top: 240px;
   margin-left: 10%;
+  padding: 5px;
   width: 80%;
+}
+
+.title {
+  margin: 50px 0 30px;
+  text-align: center;
+
+}
+
+.products {
+  text-align: center;
+}
+
+.product {
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px;
+  overflow: hidden;
+  border: solid 1px rgb(211, 211, 211);
+  border-radius: 5px;
+  height: 400px;
+  width: calc(95%/5);
+  min-width: 200px;
+  margin: 0.5%;
+}
+
+.productImage {
+  width: 100%;
+  height: 250px;
+}
+
+.productBrand {
+  text-transform: uppercase;
+  margin: 5px 0;
+  color: rgb(156, 156, 156);
+  font-size: 18px;
+}
+
+.productName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+  color: #0090E3;
+  font-size: 20px;
+}
+
+.productReviewImage {
+  height: 20px;
+}
+
+.productReview {
+  margin: 5px;
+  display: inline-block;
+  color: #0090e3c5;
+  font-size: 17px;
+}
+
+.productPrice {
+  margin: 5px;
 }

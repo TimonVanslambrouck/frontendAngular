@@ -1,26 +1,46 @@
 <div class="body">
-  <div class="category">
-    <h1>Telefonie</h1>
-  </div>
-  <div class="category">
-    <h1>Beeld & geluid</h1>
-  </div>
-  <div class="category">
-    <h1>Huishouden & wonen</h1>
-  </div>
-  <div class="category">
-    <h1>Computer & tablets</h1>
-  </div>
-  <div class="category">
-    <h1>Camera & video</h1>
-  </div>
-  <div class="category">
-    <h1>Alle categorieën</h1>
+  <div class="categoriesBox">
+    <div class="category">
+      <h1>Telefonie</h1>
+    </div>
+    <div class="category">
+      <h1>Beeld & geluid</h1>
+    </div>
+    <div class="category">
+      <h1>Huishouden & wonen</h1>
+    </div>
+    <div class="category">
+      <h1>Computer & tablets</h1>
+    </div>
+    <div class="category">
+      <h1>Camera & video</h1>
+    </div>
+    <div class="category">
+      <h1>Alle categorieën</h1>
+    </div>
   </div>
 
-  <ul>
-    <li *ngFor="let product of productList |async; index as i">
-      {{i+1}}. {{product.title}}
-    </li>
-  </ul>
+  <h1 class="title">Meest bekeken producten</h1>
+
+  <!-- <div class="products">
+    <div class="product">
+      <img class="productImage" src="assets/imgs/telefonie.jpg" alt="object">
+      <h2 class="productBrand">Apple</h2>
+      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
+      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+      <h2 class="productReview">36 reviews</h2>
+      <h2 class="productPrice">146,-</h2>
+    </div>
+  </div> -->
+
+  <div class="products">
+    <div class="product" *ngFor="let product of productList |async; index as i">
+      <img class="productImage" src="{{product.image}}" alt="object">
+      <h2 class="productBrand">{{product.category}}</h2>
+      <h1 class="productName">{{product.title}}</h1>
+      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+      <h2 class="productReview">{{product.id}} reviews</h2>
+      <h2 class="productPrice">€{{product.price}}</h2>
+    </div>
+  </div>
 </div>
