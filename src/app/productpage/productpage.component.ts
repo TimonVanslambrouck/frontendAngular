@@ -10,6 +10,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./productpage.component.scss']
 })
 export class ProductpageComponent implements OnInit {
+  currentImage = 1;
   public product!: Observable<IProduct>
   constructor(
     private dataService: DataService,

@@ -1,9 +1,45 @@
 <div class="body">
   <h2>
-    <img class="icon" src="assets/svg/arrow-down.svg" alt="back">Terug</h2>
-  <ul>
-    <li>
-      {{(product|async)?.title}}
-    </li>
-  </ul>
+    <img class="icon" src="assets/svg/arrow-down-blue.svg" alt="back">Terug
+  </h2>
+  <h1>{{(product|async)?.title}}</h1>
+  <h2 class="reviewText"><img class="reviewImage" src="assets/imgs/review.png" alt="review">9,5/10 (2612 reviews)</h2>
+  <div class="media">
+    <div class="bigImage">
+      <img src={{(product|async)?.image}} alt="">
+      <img (click)="currentImage = currentImage + 1" class="nextArrow" src="assets/svg/arrow-down-blue.svg" alt="">
+    </div>
+    <div class="smallImages">
+      <div class="container" [ngClass]="(currentImage == 1? 'current' : 'notCurrent')">
+        <img (click)="currentImage = 1" src={{(product|async)?.image}} alt="">
+      </div>
+      <div class="container" [ngClass]="(currentImage == 2? 'current' : 'notCurrent')">
+        <img (click)="currentImage = 2" src={{(product|async)?.image}} alt="">
+      </div>
+      <div class="container" [ngClass]="(currentImage == 3? 'current' : 'notCurrent')">
+        <img (click)="currentImage = 3" src={{(product|async)?.image}} alt="">
+      </div>
+      <div class="container" [ngClass]="(currentImage == 4? 'current' : 'notCurrent')">
+        <img (click)="currentImage = 4" src={{(product|async)?.image}} alt="">
+      </div>
+      <div class="container" [ngClass]="(currentImage == 5? 'current' : 'notCurrent')">
+        <img (click)="currentImage = 5" src={{(product|async)?.image}} alt="">
+      </div>
+      <div class="container" [ngClass]="(currentImage >= 6? 'current' : 'notCurrent')">
+        <img (click)="currentImage = 6" src={{(product|async)?.image}} alt="">
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="infoContent">
+      <h2 class="black">€{{(product|async)?.price}}</h2>
+      <h3>Bekijk het Tweedekans-product <span class="black">van €{{(product|async)?.price}}</span></h3>
+      <h4> <img class="checkArrow" src="assets/svg/arrow-down-white.svg" alt="check"> <span class="green">Morgen
+          geleverd</span></h4>
+      <h3><span class="black">Nog sneller op te halen in</span> 5 Coolblue-winkels</h3>
+      <h3 class="cart">In mijn winkelwagen</h3>
+      <h3 class="save">Ophalen in winkel</h3>
+      <h3 class="save">Bewaar voor later</h3>
+    </div>
+  </div>
 </div>
