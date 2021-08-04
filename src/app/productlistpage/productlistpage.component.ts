@@ -35,6 +35,10 @@ export class ProductlistpageComponent implements OnInit {
     // add to cart
   }
 
+  goToProductPage(id:number){
+    window.location.href = `products/${id}`
+  }
+
   ngOnInit(): void {
     this.productList = this.dataService.getAll();
     this.dataService.getAll()
