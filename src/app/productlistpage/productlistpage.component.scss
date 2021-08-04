@@ -30,6 +30,9 @@
 }
 
 .filters {
+  overflow: visible;
+  max-height: 600px;
+  margin-bottom: 400px;
   width: 10%;
   display: grid;
   grid-template-columns: 1fr 0.1fr;
@@ -38,6 +41,7 @@
 
 .filters label {
   align-self: center;
+  margin: 5px 0;
 }
 
 .filters h2 {
@@ -45,7 +49,6 @@
 }
 
 .filters h3 {
-  margin: 0;
   align-self: center;
   margin-right: 10px;
 }

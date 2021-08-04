@@ -88,51 +88,17 @@
   </div>
 
   <div class="products">
-    <div class="product">
-      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
-      <h2 class="productBrand">Apple</h2>
-      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
-      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
-      <h2 class="productReview">36 reviews</h2>
-      <h2 class="productPrice">146,-</h2>
-      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
-    </div>
-    <div class="product">
-      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
-      <h2 class="productBrand">Apple</h2>
-      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
-      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
-      <h2 class="productReview">36 reviews</h2>
-      <h2 class="productPrice">146,-</h2>
-      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
-    </div>
-    <div class="product">
-      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
-      <h2 class="productBrand">Apple</h2>
-      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
-      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
-      <h2 class="productReview">36 reviews</h2>
-      <h2 class="productPrice">146,-</h2>
-      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
-    </div>
-    <div class="product">
-      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
-      <h2 class="productBrand">Apple</h2>
-      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
-      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
-      <h2 class="productReview">36 reviews</h2>
-      <h2 class="productPrice">146,-</h2>
-      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
-    </div>
-    <div class="product">
-      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
-      <h2 class="productBrand">Apple</h2>
-      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
-      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
-      <h2 class="productReview">36 reviews</h2>
-      <h2 class="productPrice">146,-</h2>
-      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
-    </div>
+    <ng-container *ngFor="let product of productList |async; index as i">
+      <div class="product">
+        <div class="image"><img class="productImage" src={{product.image}}></div>
+        <h2 class="productBrand">{{product.category}}</h2>
+        <h1 class="productName">{{product.title}}</h1>
+        <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+        <h2 class="productReview">{{product.id}} reviews</h2>
+        <h2 class="productPrice">€{{product.price}}</h2>
+        <img (click)="addToCart(product.id)" class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
+      </div>
+    </ng-container>
   </div>
 
 </div>
