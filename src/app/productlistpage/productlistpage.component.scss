@@ -1,0 +1,141 @@
+.body {
+  margin: 1% 15%;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: auto;
+}
+
+.body label {
+  color: rgb(121, 121, 121);
+  margin-right: 10px;
+}
+
+.title {
+  color: #0090e3;
+  display: inline-block;
+  margin: 0;
+}
+
+.dropdown {
+  margin-top: 13px;
+  justify-self: end;
+}
+
+#sort {
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  border: solid 1px rgb(121, 121, 121);
+}
+
+.filters {
+  width: 10%;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+  grid-template-rows: auto;
+}
+
+.filters label {
+  align-self: center;
+}
+
+.filters h2 {
+  color: rgb(121, 121, 121);
+}
+
+.filters h3 {
+  margin: 0;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.arrow {
+  width: 20px;
+  align-self: center;
+}
+
+.arrowFlip {
+  transform: rotate(180deg);
+  width: 20px;
+  align-self: center;
+}
+
+.products {
+  margin-left: 5%;
+  margin-top: 50px;
+}
+
+.product {
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  border: solid 1px rgb(211, 211, 211);
+  border-radius: 5px;
+  height: 350px;
+  width: calc(97%/3);
+  min-width: 200px;
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+
+.productHeart {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 30px;
+}
+
+.image {
+  text-align: center;
+}
+
+.productImage {
+  height: 200px;
+}
+
+.productBrand {
+  text-transform: uppercase;
+  margin: 5px 5px;
+  color: rgb(156, 156, 156);
+  font-size: 18px;
+}
+
+.productName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #0090E3;
+  font-size: 20px;
+}
+
+.productReviewImage {
+  margin-left: 5px;
+  height: 20px;
+}
+
+.productReview {
+  margin: 5px;
+  display: inline-block;
+  color: #0090e3c5;
+  font-size: 17px;
+}
+
+.productPrice {
+  margin: 5px;
+}
+
+.cart {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 25px;
+  background-color: #00B900;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+}

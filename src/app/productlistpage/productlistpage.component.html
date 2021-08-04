@@ -1,1 +1,138 @@
-<p>productlistpage works!</p>
+<div class="body">
+  <h1 class="title">Telefonie</h1>
+  <div class="dropdown">
+    <label for="sort">Sorteren op:</label>
+    <select name="sort" id="sort">
+      <option value="relevance">Relevantie</option>
+      <option value="priceLowHigh">Prijs laag-hoog</option>
+      <option value="priceHighLow">Prijs hoog-laag</option>
+      <option value="bestSold">Best verkocht</option>
+      <option value="bestRated">Best beoordeeld</option>
+    </select>
+  </div>
+
+  <div class="filters">
+    <h2>Filters</h2>
+    <p></p>
+    <h3 (click)="showBrand = !showBrand">Merk</h3>
+    <img (click)="showBrand = !showBrand" [ngClass]="(showBrand? 'arrowFlip' : 'arrow')" src="assets/svg/arrow-down.svg"
+      alt="">
+    <label *ngIf="showBrand" for="apple">Apple</label>
+    <input *ngIf="showBrand" type="checkbox" id="apple" name="apple" value="apple">
+    <label *ngIf="showBrand" for="smasung">Samsung</label>
+    <input *ngIf="showBrand" type="checkbox" id="smasung" name="smasung" value="smasung">
+    <label *ngIf="showBrand" for="nokia">Nokia</label>
+    <input *ngIf="showBrand" type="checkbox" id="nokia" name="nokia" value="nokia">
+    <h3 (click)="showStorage = !showStorage">Opslagcapaciteit</h3>
+    <img (click)="showStorage = !showStorage" [ngClass]="(showStorage? 'arrowFlip' : 'arrow')"
+      src="assets/svg/arrow-down.svg" alt="">
+    <label *ngIf="showStorage" for="16GB">16GB</label>
+    <input *ngIf="showStorage" type="checkbox" id="16GB" name="16GB" value="16GB">
+    <label *ngIf="showStorage" for="32GB">32GB</label>
+    <input *ngIf="showStorage" type="checkbox" id="32GB" name="32GB" value="32GB">
+    <label *ngIf="showStorage" for="64GB">64GB</label>
+    <input *ngIf="showStorage" type="checkbox" id="64GB" name="64GB" value="64GB">
+    <h3 (click)="showPrice = !showPrice">Prijs</h3>
+    <img (click)="showPrice = !showPrice" [ngClass]="(showPrice? 'arrowFlip' : 'arrow')" src="assets/svg/arrow-down.svg"
+      alt="">
+    <label *ngIf="showPrice" for="max50">0 - 50</label>
+    <input *ngIf="showPrice" type="checkbox" id="max50" name="max50" value="max50">
+    <label *ngIf="showPrice" for="max100">50 - 100</label>
+    <input *ngIf="showPrice" type="checkbox" id="max100" name="max100" value="max100">
+    <label *ngIf="showPrice" for="min100">100+</label>
+    <input *ngIf="showPrice" type="checkbox" id="min100" name="min100" value="min100">
+    <h3 (click)="showReview = !showReview">Reviewscore</h3>
+    <img (click)="showReview = !showReview" [ngClass]="(showReview? 'arrowFlip' : 'arrow')"
+      src="assets/svg/arrow-down.svg" alt="">
+    <label *ngIf="showReview" for="1star">1 ster en meer</label>
+    <input *ngIf="showReview" type="checkbox" id="1star" name="1star" value="1star">
+    <label *ngIf="showReview" for="2star">2 ster en meer</label>
+    <input *ngIf="showReview" type="checkbox" id="2star" name="2star" value="2star">
+    <label *ngIf="showReview" for="3star">3 ster en meer</label>
+    <input *ngIf="showReview" type="checkbox" id="3star" name="3star" value="3star">
+    <label *ngIf="showReview" for="4star">1 ster en meer</label>
+    <input *ngIf="showReview" type="checkbox" id="4star" name="4star" value="4star">
+    <label *ngIf="showReview" for="5star">5 ster</label>
+    <input *ngIf="showReview" type="checkbox" id="5star" name="5star" value="5star">
+    <h3 (click)="showColor = !showColor">Kleur</h3>
+    <img (click)="showColor = !showColor" [ngClass]="(showColor? 'arrowFlip' : 'arrow')" src="assets/svg/arrow-down.svg"
+      alt="">
+    <label *ngIf="showColor" for="black">Zwart</label>
+    <input *ngIf="showColor" type="checkbox" id="black" name="black" value="black">
+    <label *ngIf="showColor" for="silver">Zilver</label>
+    <input *ngIf="showColor" type="checkbox" id="silver" name="silver" value="silver">
+    <label *ngIf="showColor" for="green">Groen</label>
+    <input *ngIf="showColor" type="checkbox" id="green" name="green" value="green">
+    <label *ngIf="showColor" for="red">Rood</label>
+    <input *ngIf="showColor" type="checkbox" id="red" name="red" value="red">
+    <h3>Schermdiagonaal</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>Formaat toestel</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>Camerakwaliteit</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>Batterijduur</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>Snelheid</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>Schermkwaliteit</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>4G of 5G</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>Op voorraad in de winkel</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>Tweedekans</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+    <h3>Coolblue's Keuze</h3>
+    <img class="arrow" src="assets/svg/arrow-down.svg" alt="">
+  </div>
+
+  <div class="products">
+    <div class="product">
+      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
+      <h2 class="productBrand">Apple</h2>
+      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
+      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+      <h2 class="productReview">36 reviews</h2>
+      <h2 class="productPrice">146,-</h2>
+      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
+    </div>
+    <div class="product">
+      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
+      <h2 class="productBrand">Apple</h2>
+      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
+      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+      <h2 class="productReview">36 reviews</h2>
+      <h2 class="productPrice">146,-</h2>
+      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
+    </div>
+    <div class="product">
+      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
+      <h2 class="productBrand">Apple</h2>
+      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
+      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+      <h2 class="productReview">36 reviews</h2>
+      <h2 class="productPrice">146,-</h2>
+      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
+    </div>
+    <div class="product">
+      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
+      <h2 class="productBrand">Apple</h2>
+      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
+      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+      <h2 class="productReview">36 reviews</h2>
+      <h2 class="productPrice">146,-</h2>
+      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
+    </div>
+    <div class="product">
+      <div class="image"><img class="productImage" src="assets/imgs/telefonie.jpg" alt="object"></div>
+      <h2 class="productBrand">Apple</h2>
+      <h1 class="productName">Apple AirPods 2 met oplaadcase</h1>
+      <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
+      <h2 class="productReview">36 reviews</h2>
+      <h2 class="productPrice">146,-</h2>
+      <img class="cart" src="assets/svg/shopping-cart.svg" alt="cart">
+    </div>
+  </div>
+
+</div>
