@@ -17,6 +17,10 @@ export class HeaderComponent implements OnInit {
     this.showCategories = false  
   }
 
+  goHome(){
+    window.location.href = ' ';
+  }
+
   constructor() { }
 
   ngOnInit(): void {

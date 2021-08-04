@@ -22,6 +22,10 @@ export class HomepageComponent implements OnInit {
     }
   }
 
+  goToCategories(){
+    window.location.href = 'categories';
+  }
+
   ngOnInit(): void {
     this.productList = this.dataService.getAll();
   }
