@@ -1,3 +1,4 @@
+import { CategoriespageComponent } from './categoriespage/categoriespage.component';
 import { ProductlistpageComponent } from './productlistpage/productlistpage.component';
 import { ProductpageComponent } from './productpage/productpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
     {path: '', component: ProductlistpageComponent},
     {path: ':id', component: ProductpageComponent},
   ]},  
+  {path: 'categories', component: CategoriespageComponent},
 ];
 
 @NgModule({

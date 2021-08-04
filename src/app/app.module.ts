@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './header/search/search.component';
 import { FooterComponent } from './footer/footer.component';
+import { CategoriespageComponent } from './categoriespage/categoriespage.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     ProductlistpageComponent,
     HeaderComponent,
     SearchComponent,
-    FooterComponent
+    FooterComponent,
+    CategoriespageComponent
   ],
   imports: [
     BrowserModule,
