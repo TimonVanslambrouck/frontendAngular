@@ -9,10 +9,12 @@
 
 <nav>
   <li (click)="toggleShowCategories()">
-    <h1>Categorieën <span [className]="showCategories? 'arrow' : 'reversedArrow'">v</span></h1>
+    <h1>Categorieën <img [className]="showCategories? 'arrow' : 'reversedArrow'" src="assets/svg/arrow-down-blue.svg"
+        alt="back"></h1>
   </li>
   <li (click)="toggleShowCategories2()">
-    <h1>Acties <span class="arrow">v</span></h1>
+    <h1>Acties <img [className]="showCategories2? 'arrow' : 'reversedArrow'" src="assets/svg/arrow-down-blue.svg"
+        alt="back"></h1>
   </li>
   <li>
     <h1>Zakelijk</h1>

@@ -37,7 +37,7 @@
 
   <div class="products">
     <ng-container *ngFor="let product of productList |async; index as i">
-      <div *ngIf="i<5" class="product">
+      <div (click)="goToProductPage(product.id)" *ngIf="i<5" class="product">
         <img (click)="onSave(product.id)" class="productHeart" id="heart{{product.id}}" src="assets/svg/heart-thin.svg"
           alt="like">
         <img class="productImage" src="{{product.image}}" alt="object">

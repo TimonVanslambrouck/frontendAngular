@@ -91,11 +91,14 @@ nav h1 {
 }
 
 .arrow {
-  font-size: 15px;
+  transform: rotate(180deg);
+  width: 15px;
+  height: 15px;
 }
 
 .reversedArrow {
-  font-size: 15px;
+  width: 15px;
+  height: 15px;
 }
 
 .categories {
