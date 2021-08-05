@@ -1,9 +1,10 @@
 <header>
   <h1 (click)="goHome()" class="item1">cool <br> blue</h1>
-  <h1 class="item2">NL <span class="arrow">v</span></h1>
+  <h1 (click)="showLanguages = !showLanguages" class="item2">NL
+    <img [className]="showLanguages? 'icon2reversed' : 'icon2'" src="assets/svg/arrow-down-white.svg" alt="heart"></h1>
   <app-search class="item3"></app-search>
   <img class="icon item4" src="assets/svg/heart.svg" alt="heart">
-  <img (click)="showCart()" class="icon item5" src="assets/svg/shopping-cart.svg" alt="heart">
+  <img (click)="showCart = !showCart" class="icon item5" src="assets/svg/shopping-cart.svg" alt="heart">
   <img class="icon item6" src="assets/svg/ui-user.svg" alt="heart">
 </header>
 
@@ -26,6 +27,14 @@
     <h1>Klantenservice</h1>
   </li>
 </nav>
+
+<div *ngIf="showLanguages" class="categories3">
+  <ul>
+    <li>ENG</li>
+    <li>FR</li>
+    <li>NL</li>
+  </ul>
+</div>
 
 <div *ngIf="showCategories" class="categories">
   <ul>
@@ -50,4 +59,28 @@
     <li>Coolblue fanartikelen</li>
     <li>Alle merken</li>
   </ul>
+</div>
+
+<div *ngIf="showCart" class="categories4">
+  <ng-container *ngFor="let product of cart; index as i ">
+    <div class="product">
+      <div (click)="goToPage(product.id)" class="imagecontainer"><img src={{product.picture}} alt=""></div>
+      <div class="stats">
+        <h1 (click)="goToPage(product.id)">{{product.title}}</h1>
+        <div class="delete">
+          <h2>{{product.price}}</h2>
+          <img (click)="deleteProduct(ids[i])" class="deleteIcon" src="assets/svg/garbage.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<div *ngIf="showCart" [className]="cart != undefined && cart.length < 2? 'pay' : 'pay2'">
+  <div class="payButton">
+    <p>Afrekenen</p>
+  </div>
+  <div (click)="showCart = !showCart" class="closeButton">
+    <p>X</p>
+  </div>
 </div>

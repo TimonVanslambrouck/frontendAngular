@@ -31,6 +31,7 @@ header * {
 }
 
 .item2 {
+  cursor: pointer;
   grid-area: b;
   font-size: 12pt;
 }
@@ -54,7 +55,6 @@ header * {
 
 .icon {
   cursor: pointer;
-  fill: red;
   height: 30px;
   width: 30px;
 }
@@ -113,13 +113,18 @@ nav h1 {
 }
 
 .categories ul,
-.categories2 ul {
+.categories2 ul,
+.categories3 ul,
+.categories4 ul {
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .categories li,
-.categories2 li {
+.categories2 li,
+.categories3 li,
+.categories4 li {
   margin: 15px 20px;
 }
 
@@ -132,4 +137,149 @@ nav h1 {
   margin-left: calc((250%/7.9));
   width: 12%;
   height: 210px;
+}
+
+.categories3 {
+  text-align: center;
+  z-index: 100;
+  border: rgb(194, 194, 194) 1px solid;
+  position: absolute;
+  background-color: white;
+  color: #0090E3;
+  margin-left: calc((100%/13)*4);
+  width: calc(100%/13);
+  height: 120px;
+  top: 60px;
+}
+
+.icon2 {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+}
+
+.icon2reversed {
+  transform: rotate(180deg);
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+}
+
+.categories4 {
+  overflow: scroll;
+  overflow-x: hidden;
+  z-index: 100;
+  border: rgb(194, 194, 194) 1px solid;
+  position: absolute;
+  background-color: white;
+  color: #0090E3;
+  margin-left: calc((100%/13)*8.5);
+  width: calc(100%/13*2);
+  max-height: 300px;
+  top: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px;
+}
+
+.product {
+  border-bottom: rgb(194, 194, 194) 1px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px;
+}
+
+.imagecontainer {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+}
+
+.imagecontainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stats {
+  margin-left: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80% 20%;
+}
+
+// Source: https://stackoverflow.com/a/15175769
+
+.stats h1 {
+  cursor: pointer;
+  max-height: calc(4*1.2em);
+  line-height: 1.2em;
+  margin-right: 15px;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.delete {
+  position: relative;
+}
+
+.deleteIcon {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+  height: calc(100%-5px);
+}
+
+.delete h2 {
+  margin-top: 5px;
+  align-self: center;
+  font-size: 16px;
+  color: black;
+}
+
+.pay {
+  background-color: white;
+  position: absolute;
+  margin-left: calc((100%/13)*8.5);
+  width: calc(100%/13*2);
+  height: 40px;
+  top: 209px;
+  border: rgb(194, 194, 194) 1px solid;
+}
+
+.pay2 {
+  background-color: white;
+  position: absolute;
+  margin-left: calc((100%/13)*8.5);
+  width: calc(100%/13*2);
+  height: 40px;
+  top: 360px;
+  border: rgb(194, 194, 194) 1px solid;
+}
+
+.payButton {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  width: 80%;
+  border-radius: 10px;
+  color: white;
+  background-color: #00B900;
+  padding: 10px 0;
+}
+
+.closeButton {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  width: 20%;
+  border-radius: 10px;
+  color: white;
+  background-color: #E31E1E;
+  padding: 10px 0;
 }

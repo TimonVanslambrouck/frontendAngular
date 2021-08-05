@@ -9,6 +9,8 @@ import { FirebaseService } from '../firebase.service';
 export class HeaderComponent implements OnInit {
   showCategories = false;
   showCategories2 = false;
+  showLanguages = false;
+  showCart = false;
   cart:any;
   ids:any;
   toggleShowCategories(){
@@ -20,16 +22,16 @@ export class HeaderComponent implements OnInit {
     this.showCategories = false  
   }
 
+  goToPage(id:number){
+    window.location.href = `products/${id}`
+  }
+
   goHome(){
     window.location.href = ' ';
   }
 
-  showCart(){
-    console.log(this.cart);
-    console.log(this.ids);
-  }
-
   deleteProduct(id:string){
+    this.cart = [];
     this.firebaseService.deleteProduct(id);
   }
 

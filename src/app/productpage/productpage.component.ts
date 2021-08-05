@@ -35,6 +35,7 @@ export class ProductpageComponent implements OnInit {
       };
       this.firebaseService.createNewProduct(product).then(res =>{
           console.log(res);
+          window.location.reload();
       }).catch(error => {
         console.log(error);
       })
