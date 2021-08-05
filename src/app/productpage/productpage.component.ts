@@ -26,6 +26,10 @@ export class ProductpageComponent implements OnInit {
       //add to cart
     }
 
+    goBack(){
+      window.history.back();
+    }
+
     changeActive(option:string){
       document.getElementById('menu')?.scrollIntoView();
       this.activeMenu = option;
