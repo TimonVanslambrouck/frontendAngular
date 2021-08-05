@@ -17,4 +17,8 @@ export class FirebaseService {
   getAllProducts(){
     return this.fireservices.collection('products').snapshotChanges();
   }
+
+  deleteProduct(id:string){
+    return this.fireservices.doc('products/' + id).delete();
+  }
 }

@@ -26,7 +26,7 @@ export class ProductpageComponent implements OnInit {
       // save to fav
     }
 
-    async addToCart(){
+    addToCart(){
       let product = {
         id: this.activeProduct.id,
         title: this.activeProduct.title,
