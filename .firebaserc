@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "coolblue-d924d": {
+      "hosting": {
+        "coolblue": [
+          "coolblue-d924d"
+        ]
+      }
+    }
+  }
+}
