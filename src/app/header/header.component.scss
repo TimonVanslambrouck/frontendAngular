@@ -102,6 +102,7 @@ nav h1 {
 }
 
 .categories {
+  z-index: 100;
   border: rgb(194, 194, 194) 1px solid;
   position: absolute;
   background-color: white;
@@ -123,6 +124,7 @@ nav h1 {
 }
 
 .categories2 {
+  z-index: 100;
   border: rgb(194, 194, 194) 1px solid;
   position: absolute;
   background-color: white;

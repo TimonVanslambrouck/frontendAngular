@@ -20,11 +20,13 @@
 }
 
 .reviewText {
+  cursor: pointer;
   font-size: 15px;
   color: #0090e3cc;
 }
 
 .media {
+  margin-top: 15px;
   display: inline-block;
   width: 50%;
   overflow: hidden;
@@ -106,7 +108,7 @@
 }
 
 .green {
-  margin-left: 10px;
+  margin-left: 5px;
   color: #00B900;
 }
 
@@ -119,15 +121,25 @@
 }
 
 .cart {
+  cursor: pointer;
   border-radius: 10px;
-  padding: 15px 0;
+  padding: 10px 0;
+  margin: 5px;
   text-align: center;
   color: white;
   width: 80%;
   background-color: #00B900;
+  font-size: 20px;
+}
+
+#cartSvg {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
 }
 
 .save {
+  cursor: pointer;
   border-radius: 10px;
   padding: 15px 0;
   text-align: center;
@@ -135,4 +147,151 @@
   width: 40%;
   -webkit-box-shadow: 5px 4px 12px -10px #000;
   box-shadow: 5px 4px 12px -10px #000;
+}
+
+.menu {
+  border: #0090E3 solid 1px;
+  margin: 25px 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+}
+
+.menuTitle {
+  font-size: 16px;
+}
+
+.menu div:first-of-type {
+  grid-column-start: 2;
+}
+
+.activeGrid {
+  color: white;
+  background-color: #0090E3;
+}
+
+.notActiveGrid {
+  cursor: pointer;
+  color: #0090E3;
+  background-color: white;
+}
+
+.menuTitle2 {
+  padding-bottom: 5px;
+  font-size: 25px;
+  border-bottom: #000 solid 1px;
+}
+
+.description {
+  color: #000;
+  margin-bottom: 60px;
+}
+
+.container2 {
+  text-align: center;
+  position: relative;
+  border: solid 1px rgba(211, 211, 211, 0.493);
+  display: inline-block;
+  width: calc(97%/4);
+  margin-right: 1%;
+  height: 160px;
+  box-sizing: border-box;
+  padding: 1%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.container2:last-of-type {
+  margin-right: 0;
+}
+
+// Source: https://stackoverflow.com/a/30938958
+.containerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.containerName {
+  font-weight: bold;
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 85%;
+  border-radius: 10px;
+  bottom: 0;
+  left: 5%;
+  background-color: white;
+  padding: 2.5%;
+  margin: 0 0 10px;
+  -webkit-box-shadow: -1px 4px 11px -9px #000;
+  box-shadow: -1px 4px 11px -9px #000;
+}
+
+.menuSubtitle {
+  color: #000;
+  font-size: 20px;
+}
+
+.menuPoints {
+  color: #000;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.iconPoint {
+  align-self: center;
+  height: 20px;
+  width: 20px;
+}
+
+.points {
+  display: grid;
+  grid-template-columns: 24px auto;
+  grid-template-rows: auto;
+}
+
+.body2 {
+  margin: 30px 20%;
+  color: #000;
+}
+
+.body2 h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+.body2 p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.body2 h2 {
+  font-size: 20px;
+}
+
+.reviewImage2 {
+  margin-left: 10px;
+  width: 120px;
+  display: inline-block;
+}
+
+.reviewNumbers {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr 1fr;
+  grid-template-rows: auto;
+}
+
+.line {
+  width: 100%;
+  border-radius: 12px;
+  background-color: rgb(202, 202, 202);
+  margin-bottom: 10px;
+}
+
+.reviewNumbersReviews {
+  padding-left: 15px;
+  padding-bottom: 10px;
 }

@@ -3,7 +3,8 @@
     <img class="icon" src="assets/svg/arrow-down-blue.svg" alt="back">Terug
   </h2>
   <h1>{{(product|async)?.title}}</h1>
-  <h2 class="reviewText"><img class="reviewImage" src="assets/imgs/review.png" alt="review">9,5/10 (2612 reviews)</h2>
+  <h2 (click)="changeActive('reviews')" class="reviewText"><img class="reviewImage" src="assets/imgs/review.png"
+      alt="review">9,5/10 (2612 reviews)</h2>
   <div class="media">
     <div class="bigImage">
       <img src={{(product|async)?.image}} alt="">
@@ -37,9 +38,110 @@
       <h4> <img class="checkArrow" src="assets/svg/arrow-down-white.svg" alt="check"> <span class="green">Morgen
           geleverd</span></h4>
       <h3><span class="black">Nog sneller op te halen in</span> 5 Coolblue-winkels</h3>
-      <h3 class="cart">In mijn winkelwagen</h3>
+      <h4 (click)="addToCart()" class="cart"><img id="cartSvg" src="assets/svg/shopping-cart.svg" alt="cart">In mijn
+        winkelwagen</h4>
       <h3 class="save">Ophalen in winkel</h3>
-      <h3 class="save">Bewaar voor later</h3>
+      <h3 (click)="onSave()" class="save">Bewaar voor later</h3>
+    </div>
+  </div>
+</div>
+<div id="menu" class="menu">
+  <div (click)="changeActive('description')" [ngClass]="(activeMenu == 'description'? 'activeGrid' : 'notActiveGrid')">
+    <h2 class="menuTitle">Productbeschrijving</h2>
+  </div>
+  <div (click)="changeActive('accessories')" [ngClass]="(activeMenu == 'accessories'? 'activeGrid' : 'notActiveGrid')">
+    <h2 class="menuTitle">Acessoires</h2>
+  </div>
+  <div (click)="changeActive('characteristics')"
+    [ngClass]="(activeMenu == 'characteristics'? 'activeGrid' : 'notActiveGrid')">
+    <h2 class="menuTitle">Productkenmerken</h2>
+  </div>
+  <div (click)="changeActive('reviews')" [ngClass]="(activeMenu == 'reviews'? 'activeGrid' : 'notActiveGrid')">
+    <h2 class="menuTitle">Reviews</h2>
+  </div>
+  <div (click)="changeActive('alternatives')"
+    [ngClass]="(activeMenu == 'alternatives'? 'activeGrid' : 'notActiveGrid')">
+    <h2 class="menuTitle">Alternatieven</h2>
+  </div>
+</div>
+
+<div class="body">
+  <div *ngIf="activeMenu == 'description'">
+    <h1 class="menuTitle2">Productbeschrijving</h1>
+    <p class="description">{{(product|async)?.title}} <br> <br> {{(product|async)?.description}}</p>
+  </div>
+  <div *ngIf="activeMenu == 'accessories'">
+    <h1 class="menuTitle2">Acessoires</h1>
+    <div class="container2">
+      <img class="containerImage" src={{(product|async)?.image}} alt="">
+      <p class="containerName">{{(product|async)?.title}}</p>
+    </div>
+    <div class="container2">
+      <img class="containerImage" src={{(product|async)?.image}} alt="">
+      <p class="containerName">{{(product|async)?.title}}</p>
+    </div>
+    <div class="container2">
+      <img class="containerImage" src={{(product|async)?.image}} alt="">
+      <p class="containerName">{{(product|async)?.title}}</p>
+    </div>
+    <div class="container2">
+      <img class="containerImage" src={{(product|async)?.image}} alt="">
+      <p class="containerName">{{(product|async)?.title}}</p>
+    </div>
+  </div>
+  <div *ngIf="activeMenu == 'characteristics'">
+    <h1 class="menuTitle2">Productkenmerken</h1>
+    <h2 class="menuSubtitle">Plus- en minpunten</h2>
+    <div class="points">
+      <img class="iconPoint" src="assets/svg/plus.svg" alt="plus">
+      <p class="menuPoints">Dankzij de H1 chip verbind je de oordopjes automatisch met jouw Apple apparaten en activeer
+        je Siri met je stem. </p>
+    </div>
+    <div class="points">
+      <img class="iconPoint" src="assets/svg/min.svg" alt="min">
+      <p class="menuPoints">Dankzij de H1 chip verbind je de oordopjes automatisch met jouw Apple apparaten en activeer
+        je Siri met je stem. </p>
+    </div>
+  </div>
+  <div *ngIf="activeMenu == 'reviews'">
+    <h1 class="menuTitle2">Reviews</h1>
+    <div class="body2">
+      <h1>9,5</h1>
+      <img class="reviewImage2" src="assets/imgs/review.png" alt="">
+      <p>Gebaseerd op 156 reviews</p>
+      <h2>Beoordelingen</h2>
+      <div class="reviewNumbers">
+        <p>5 sterren</p>
+        <div class="line"></div>
+        <p class="reviewNumbersReviews">6165 reviews</p>
+      </div>
+      <div class="reviewNumbers">
+        <p>4 sterren</p>
+        <div class="line"></div>
+        <p class="reviewNumbersReviews">6165 reviews</p>
+      </div>
+      <div class="reviewNumbers">
+        <p>3 sterren</p>
+        <div class="line"></div>
+        <p class="reviewNumbersReviews">6165 reviews</p>
+      </div>
+      <div class="reviewNumbers">
+        <p>2 sterren</p>
+        <div class="line"></div>
+        <p class="reviewNumbersReviews">6165 reviews</p>
+      </div>
+      <div class="reviewNumbers">
+        <p>1 sterren</p>
+        <div class="line"></div>
+        <p class="reviewNumbersReviews">6165 reviews</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="activeMenu == 'alternatives'">
+    <h1 class="menuTitle2">Alternatieven</h1>
+    <div class="container2">
+      <img class="containerImage" src={{(product|async)?.image}} alt="">
+      <p class="containerName">{{(product|async)?.title}}</p>
     </div>
   </div>
 </div>

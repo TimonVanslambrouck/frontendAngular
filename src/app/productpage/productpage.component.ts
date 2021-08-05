@@ -11,11 +11,25 @@ import { DataService } from '../data.service';
 })
 export class ProductpageComponent implements OnInit {
   currentImage = 1;
-  public product!: Observable<IProduct>
+  public product!: Observable<IProduct>;
+  activeMenu = 'description';
   constructor(
     private dataService: DataService,
     private activatedRoute: ActivatedRoute
     ) { }
+
+    onSave(){
+      // save to fav
+    }
+
+    addToCart(){
+      //add to cart
+    }
+
+    changeActive(option:string){
+      document.getElementById('menu')?.scrollIntoView();
+      this.activeMenu = option;
+    }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params.id;
