@@ -37,15 +37,15 @@
 
   <div class="products">
     <ng-container *ngFor="let product of productList |async; index as i">
-      <div (click)="goToProductPage(product.id)" *ngIf="i<5" class="product">
+      <div *ngIf="i<5" class="product">
         <img (click)="onSave(product.id)" class="productHeart" id="heart{{product.id}}" src="assets/svg/heart-thin.svg"
           alt="like">
-        <img class="productImage" src="{{product.image}}" alt="object">
-        <h2 class="productBrand">{{product.category}}</h2>
-        <h1 class="productName">{{product.title}}</h1>
-        <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
-        <h2 class="productReview">{{product.id}} reviews</h2>
-        <h2 class="productPrice">€{{product.price}}</h2>
+        <img (click)="goToProductPage(product.id)" class="productImage" src="{{product.image}}" alt="object">
+        <h2 (click)="goToProductPage(product.id)" class="productBrand">{{product.category}}</h2>
+        <h1 (click)="goToProductPage(product.id)" class="productName">{{product.title}}</h1>
+        <img (click)="goToProductPage(product.id)" class="productReviewImage" src="assets/imgs/review.png" alt="review">
+        <h2 (click)="goToProductPage(product.id)" class="productReview">{{product.id}} reviews</h2>
+        <h2 (click)="goToProductPage(product.id)" class="productPrice">€{{product.price}}</h2>
       </div>
     </ng-container>
   </div>
@@ -59,15 +59,15 @@
 
   <div class="products">
     <ng-container *ngFor="let product of productList |async; index as i">
-      <div (click)="goToProductPage(product.id)" *ngIf="i>=5 && i<10" class="product">
+      <div *ngIf="i>=5 && i<10" class="product">
         <img (click)="onSave(product.id)" class="productHeart" id="heart{{product.id}}" src="assets/svg/heart-thin.svg"
           alt="like">
-        <img class="productImage" src="{{product.image}}" alt="object">
-        <h2 class="productBrand">{{product.category}}</h2>
-        <h1 class="productName">{{product.title}}</h1>
-        <img class="productReviewImage" src="assets/imgs/review.png" alt="review">
-        <h2 class="productReview">{{product.id}} reviews</h2>
-        <h2 class="productPrice">€{{product.price}}</h2>
+        <img (click)="goToProductPage(product.id)" class="productImage" src="{{product.image}}" alt="object">
+        <h2 (click)="goToProductPage(product.id)" class="productBrand">{{product.category}}</h2>
+        <h1 (click)="goToProductPage(product.id)" class="productName">{{product.title}}</h1>
+        <img (click)="goToProductPage(product.id)" class="productReviewImage" src="assets/imgs/review.png" alt="review">
+        <h2 (click)="goToProductPage(product.id)" class="productReview">{{product.id}} reviews</h2>
+        <h2 (click)="goToProductPage(product.id)" class="productPrice">€{{product.price}}</h2>
       </div>
     </ng-container>
   </div>
